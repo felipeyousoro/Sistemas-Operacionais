@@ -14,8 +14,7 @@ struct birthday {
 
 static LIST_HEAD(birthday_list);
 
-struct birthday *birthday_new(int day, int month, int year)
-{
+struct birthday *birthday_new(int day, int month, int year) {
        struct birthday *new_birthday;
 
        new_birthday = kmalloc(sizeof(*new_birthday), GFP_KERNEL);
@@ -30,7 +29,7 @@ struct birthday *birthday_new(int day, int month, int year)
 }
 
 /* This function is called when the module is loaded. */
-int simple_init(void){
+int simple_init(void) {
 
        struct birthday *persons[5], *ptr;
 
